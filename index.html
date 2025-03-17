@@ -1,57 +1,43 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-        }
-        section {
-            margin: 20px;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Portafolio</h1>
-    </header>
-    <section>
-        <h2>Sobre mí</h2>
-        <p>Soy Bruno Villarreal, estudiante de la escuela secundaria El Obraje.</p>
-    </section>
-    <section>
-        <h2>Proyectos</h2>
-        <p>Aquí puedes ver algunos de mis proyectos.</p>
-    </section>
-    <section>
-        <h2>Contacto</h2>
-        <p>Puedes contactarme en: <a href="mailto:brunovillarreal358@gmail.com">brunovillarreal358@gmail.co</a></p>
-    </section>
-    <footer>
-        &copy; 2025 - Mi Portafolio
-    </footer>
-</body>
-</html>
+<!-- Es de buena practica comenzar a estructurar nuestros achivos ordenando la estructura para el desarrollo
+ en este caso del portafolio web, por lo tanto esta estructura puede variar segun nuestro poryecto-->
+
+ <!DOCTYPE html>
+ <html lang="es"> <!-- Definir el idioma -->
+ <head>
+     <meta charset="UTF-8"> <!-- Definir el tipo de codificación -->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+     <!-- agregamos etiquetas meta para el Seo, y otra del author-->
+     <meta name="description" content="Portafolio web de Nombre del alumno">
+     <meta name="keywords" content="Portafolio, web, desarrollador web, programación,Contacto">
+     <meta name="author" content="Bruno Villarreal">
+     <title>Portafolio web</title>
+     <link rel="stylesheet" href="./Assets/css/style.css">
+ </head>
+ <body>
+     <header>
+         <h1>Bruno Villarreal</h1>
+        <!-- <img src="" alt="Bruno Villarreal"> -->
+         <nav>
+             <ul class="navigation">
+               
+                 <li><a href="#">Sobre mi</a></li>
+                 <li><a href="#">Experiencias</a></li>
+                 <li><a href="#">Mis estudios</a></li>
+                 <li><a href="#">Proyectos</a></li>
+                 <li><a href="#">Contacto</a></li>
+             
+             </ul>
+     </header>
+     <main>
+         <section class="sobremi">
+             <article class="container-sobremi">
+                 <img class="img-perfil" src="./Assets/perfil.jpg" alt="fotografia de Bruno Villarreal" width="200" height="240">
+                 <h2> 
+                     Soy <b>Técnico en Informática y Programación</b>
+                     Me apasiona la gestión de base de datos, programar software y desrrollar soluciones de aplicaciones web originales y personalizadas
+                 </h2>
+             </article>
+         </section>
+ </body>
+ </html>
