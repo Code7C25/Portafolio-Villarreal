@@ -1,11 +1,11 @@
 /*Variables CSS*/
 :root {
-    --body-bg-color: #000000; /*color de fondo*/
+    --body-bg-color: #4a90e2; /* Azul Francia clarito */
     --text-color: #ffffff; /*color de la fuente*/
     --colorh1-color: #f5f5f5; /*color de la fuente*/
-    --fondo-proyectos: #000000; /*color de fondo de la tarjeta*/
-    --btn-bg-color: #1a1919; /*color de fondo de los botones*/
-    --btn-hover-bg-color: #333333; /* Sombra más clara en los botones */
+    --fondo-proyectos: #4a90e2; /* Azul Francia clarito para la tarjeta */
+    --btn-bg-color: #5cacee; /* Azul Francia más claro para botones */
+    --btn-hover-bg-color: #7db9e8; /* Sombra más clara en los botones */
     --highlight-color: #5f069a; /*color de resaltado*/
 }
 /*aplicar las variables CSS creadas por el root*/
@@ -22,13 +22,6 @@ body {
 h1,h2{
     color: var(--colorh1-color); /*color de los títulos*/
 }
-/*
-body {
-    background: #000000;
-    color: #fff; 
-    font-family: 'Segoe', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
-}*/
 
 /* estilo de la barra de navegacion*/
 a {
@@ -122,4 +115,3 @@ section {
         margin: 0  3rem; /*margen superior e inferior*/
     } 
 }
-
