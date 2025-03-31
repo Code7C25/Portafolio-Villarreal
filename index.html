@@ -1,65 +1,115 @@
-<!-- Es de buena practica comenzar a estructurar nuestros achivos ordenando la estructura para el desarrollo
- en este caso del portafolio web, por lo tanto esta estructura puede variar segun nuestro poryecto-->
- <!DOCTYPE html>
- <html lang="es">
- 
- <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-     <!-- SEO y Meta etiquetas -->
-     <meta name="description" content="Portafolio web de Bruno Villarreal">
-     <meta name="keywords" content="Portafolio, web, desarrollador web, programación, contacto">
-     <meta name="author" content="Bruno Villarreal">
-     <meta property="og:title" content="Portafolio de Bruno Villarreal">
-     <meta property="og:description" content="Conoce mis proyectos, experiencia y formación en desarrollo web">
-     <meta property="og:image" content="./Assets/perfil.jpg">
- 
-     <title>Portafolio web | Bruno Villarreal</title>
- 
-     <!-- CSS -->
-     <link rel="stylesheet" href="./css/styles.css">
-     <link rel="stylesheet" href="./css/sobremi.css">
-     <link rel="stylesheet" href="./css/experiencias.css">
-     <link rel="stylesheet" href="./css/estudios.css">
-     <link rel="stylesheet" href="./css/proyecto.css">
-     <link rel="stylesheet" href="./css/footer.css">
-     <link rel="stylesheet" href="./css/contacto.css">
- 
- </head>
- 
- <body>
-     <header>
-         <h1>Bruno Villarreal</h1>
-         <!-- Menú de navegación responsivo -->
-         <nav>
-             <ul class="navigation">
-                 <li><a href="#sobremi">Sobre mí</a></li>
-                 <li><a href="#contacto">Contacto</a></li>
-                 <li><a href="#experiencias">Experiencias</a></li>
-                 <li><a href="#estudios">Mis estudios</a></li>
-                 <li><a href="#proyectos">Proyectos</a></li>
- 
-             </ul>
-         </nav>
-     </header>
- 
-     <main class="main-container">
-         <!-- Sección Sobre Mí -->
-         <section id="sobremi" class="sobremi">
-             <article class="container-sobremi">
-                 <img class="img-perfil" src="./Assets/perfil.jpg" alt="Foto de Bruno Villarreal" width="200"
-                     height="240">
-                 <h2>Cursante del último año para recibirme de <b>Técnico en informática Profesional y Personal</b></h2>
-                 <p>Me apasiona programar y desarrollar soluciones web creativas y funcionales.</p>
-             </article>
-         </section>
- 
-         <!-- Sección de Contacto -->
-         <section id="contacto" class="mt-10">
-             <ul class="flex gap-x-10 justify-start text-white">
-                 <!-- GitHub -->
-                 <li>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO y Meta etiquetas -->
+    <meta name="description" content="Portafolio web de Bruno Villarreal">
+    <meta name="keywords" content="Portafolio, web, desarrollador web, programación, contacto">
+    <meta name="author" content="Bruno Villarreal">
+    <meta property="og:title" content="Portafolio de Bruno Villarreal">
+    <meta property="og:description" content="Conoce mis proyectos, experiencia y formación en desarrollo web">
+    <meta property="og:image" content="./Assets/perfil.jpg">
+
+    <title>Portafolio web | Bruno Villarreal</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/sobremi.css">
+    <link rel="stylesheet" href="./css/experiencias.css">
+    <link rel="stylesheet" href="./css/estudios.css">
+    <link rel="stylesheet" href="./css/proyecto.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/contacto.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Bruno Villarreal</h1>
+        <!-- Menú de navegación responsivo -->
+        <nav>
+            <ul class="navigation">
+                <li><a href="#sobremi">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#experiencias">Experiencias</a></li>
+                <li><a href="#estudios">Mis estudios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <!-- Sección Sobre mí -->
+        <section id="sobremi" class="sobremi">
+            <article class="container-sobremi">
+                <div class="perfil-imagen">
+                    <img class="img-perfil" src="./Assets/perfil.jpg" alt="Foto de Bruno Villarreal" width="200" height="240">
+                </div>
+                <div class="perfil-info">
+                    <h2>Cursante del último año para recibirme de <b>Técnico en informática Profesional y Personal</b></h2>
+                    <p>Me apasiona programar y desarrollar soluciones web creativas y funcionales.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+    <hr class="separador"> <!-- Barra horizontal azul oscuro -->
+        <!-- Sección Proyectos -->
+        <section id="proyectos" class="proyectos">
+            <article class="container-proyectos">
+                <h2>Proyectos</h2>
+                <div class="galeria-proyectos">
+                    <div class="proyecto">
+                        <img src="Assets/proyecto1.png" alt="Vista previa del Proyecto 1">
+                        <h3>Proyecto 1</h3>
+                        <p>Aplicación web para una mecánica de autos con base de datos y consultas integradas.</p>
+                        <a href="https://docs.google.com/document/d/1EQXYl-9e-TmMA0WULtUovSCAOc0NaGvT/edit?usp=sharing&ouid=103398369410311388838&rtpof=true&sd=true">Ver más</a>
+                        <a href="https://github.com/brunovillarreal123/Proyecto-Mec-nica.git">GitHub</a>
+                        <a href="javascript:void(0);" class="tecnologias" onclick="mostrarTecnologias()">Tecnologías usadas</a>
+
+                        <div id="imagenesTecnologias" style="display: none;">
+                            <img src="Assets/js-logo.svg" alt="JavaScript">
+                            <img src="Assets/html5-logo.svg" alt="HTML5">
+                            <img src="Assets/css-logo.svg" alt="CSS">
+                            <img src="Assets/php-logo.svg" alt="PHP">
+                            <img src="Assets/mysql-logo.svg" alt="MySQL">
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <hr class="separador"> <!-- Barra horizontal azul oscuro -->
+        <!-- Sección Experiencias -->
+        <section id="experiencias" class="experiencias">
+            <article class="container-experiencias">
+                <h2>Experiencias</h2>
+                <h3>Desarrollador Web y Control de Base de Datos</h3>
+                <p>Desarrollo de aplicación web con tecnologías HTML, CSS, JavaScript y MySQL.</p>
+                <h3>Profesor particular Offimática</h3>
+                <p>Dicté particulares de Excel, Word y Access a un alumno de El Obraje</p>
+            </article>
+        </section>
+        <hr class="separador"> <!-- Barra horizontal azul oscuro -->
+        <!-- Sección Estudios -->
+        <section id="estudios" class="estudios">
+            <article class="container-estudios">
+                <h2>Mis estudios</h2>
+                <h3>Título: Técnico en Informática Profesional y Personal</h3>
+                <h4>Febrero 2019 - Diciembre 2025</h4>
+                <div class="container-estudios-section">
+                    <img src="./Assets/principal-simple.png" alt="Logo del Obraje" width="100" height="100">
+                    <p>Estudiante del Instituto Parroquial El Obraje.</p>
+                </div>
+            </article>
+        </section>
+        <hr class="separador"> <!-- Barra horizontal azul oscuro -->
+        <!-- Sección de Contacto -->
+        <section id="contacto" class="contacto">
+            <h2>Contacto</h2>
+            <ul class="flex gap-x-10 justify-start text-white">
+                <li>
                     <a href="https://github.com/brunovillarreal123" target="_blank" rel="noopener">
                         <div class="style-buttons">
                             <img src="./Assets/github.png" alt="GitHub" width="64" height="64">
@@ -67,10 +117,7 @@
                         </div>
                     </a>
                 </li>
-                 
- 
-                 <!-- Instagram -->
-                 <li>
+                <li>
                     <a href="https://www.instagram.com/brunovrreal" target="_blank" rel="noopener">
                         <div class="style-buttons">
                             <img src="./Assets/instagram.png" alt="Instagram" width="64" height="64">
@@ -78,71 +125,38 @@
                         </div>
                     </a>
                 </li>
- 
- 
-                 <!-- Correo Electrónico -->
-                 <li>
-                     <a href="mailto:villarrealbruno30@gmail.com" target="_blank" rel="noopener">
-                         <div class="style-buttons">
-                             <img src="./Assets/correo.png" alt="Correo" width="64" height="64">
-                             <h4>Email</h4>
-                         </div>
-                     </a>
-                    </li>
- 
-             </ul>
-         </section>
- 
- 
-         <!-- Sección de Experiencias -->
-         <section id="experiencias" class="experiencias">
-             <article class="container-experiencias">
-                 <h2>Experiencias</h2>
-                 <h3>Desarrolladoro Web y Control de Base de Datos</h3>
-                 <p>Desarrollo de aplicación web con tecnologías HTML, CSS, JavaScript y MySQL.</p>
-             </article>
-         </section>
- 
-         <!-- Sección de Estudios -->
-         <section id="estudios" class="estudios">
-             <article class="container-estudios">
-                 <h2>Mis estudios</h2>
-                 <h3>Título: Técnico en Informática Profesional y Personal</h3>
-                 <h4>Febrero 2019 - Diciembre 2025</h4>
-                 <div class="container-estudios-section">
-                     <img src="./Assets/principal-simple.png" alt="Logo del Obraje" width="100" height="100">
-                     <p>Estudiante del Instituto Parroquial El Obraje.</p>
-                 </div>
-             </article>
-         </section>
- 
-         <!-- Sección de Proyectos -->
-         <section id="proyectos" class="proyectos">
-             <article class="container-proyectos">
-                 <h2>Proyectos</h2>
-                 <div class="galeria-proyectos">
-                     <div class="proyecto">
-                         <img src="Assets/proyecto1.png" alt="Vista previa del Proyecto 1">
-                         <h3>Proyecto 1</h3>
-                         <p>Aplicación web para una mecánica de autos con base de datos y consultas integradas.</p>
-                         <a href="https://docs.google.com/document/d/1EQXYl-9e-TmMA0WULtUovSCAOc0NaGvT/edit?usp=drive_link&ouid=103398369410311388838&rtpof=true&sd=true">Ver más</a>
-                         <a href="https://github.com/brunovillarreal123/Proyecto-Mec-nica.git">GitHub</a>
-                         <a href="#">Tecnologías usadas</a>
-                     </div>
-                 </div>
-             </article>
-         </section>
-     </main>
- 
- 
-     <footer>
-         <div class="footer-container">
-             <div class="footer-info">
-                 <p>&copy; 2025 Bruno Villarreal. Todos los derechos reservados.</p>
-             </div>
-         </div>
-     </footer>
+                <li>
+                    <a href="mailto:villarrealbruno30@gmail.com" target="_blank" rel="noopener">
+                        <div class="style-buttons">
+                            <img src="./Assets/correo.png" alt="Correo" width="64" height="64">
+                            <h4>Email</h4>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </section>
 
- </body>
- 
- </html>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <p>&copy; 2025 Bruno Villarreal. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function mostrarTecnologias() {
+            var tecnologias = document.getElementById("imagenesTecnologias");
+            if (tecnologias.style.display === "none") {
+                tecnologias.style.display = "block";
+            } else {
+                tecnologias.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

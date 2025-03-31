@@ -1,38 +1,38 @@
-/*Estilos de la seccion de proyectos*/
-.proyectos{
-    width: 80%; /*ancho del contenedor*/
-    margin: 0 auto; /*centra el contenedor*/    
-    padding: 2rem; /*espacio interno*/
-    background: var(--fondo-proyectos); /*color de fondo*/  
+/* Estilos de la sección de proyectos */
+.proyectos {
+    width: 90%; /* Aumenté el ancho del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 3rem; /* Aumentar espacio interno */
+    background: var(--fondo-proyectos); 
 }
 
-/*contenedor general que engloba los proyectos*/
-.galeria-proyectos{
+/* Contenedor general que engloba los proyectos */
+.galeria-proyectos {
     display: flex;
-    flex-wrap: wrap; /*envuelve los elementos*/
-    gap: 2rem; /*espacio entre los elementos*/
-    justify-content: center; /*centra el contenido*/
+    flex-wrap: wrap; /* Envuelve los elementos */
+    gap: 2rem; /* Espacio entre los elementos */
+    justify-content: center; /* Centra el contenido */
     margin-top: 2rem; /* Espacio superior */
 }
 
-/*Como es el contenedor de cada proyecto*/
-.proyecto{
-    background-color: rgb(25, 1, 48); /*color de fondo de la tarjeta*/
-    border: 1px solid #45275d; /*borde de la tarjeta*/
-    border-radius: 5px; /*bordes redondeados*/
-    padding: 15px; /*espacio interno*/
-    margin: 0 0 2rem; /*margen*/
-    width: calc(40% - 40px); /*ancho de la tarjeta ajustado*/
-    box-shadow: 1px 2px 5px #af9fb6; /*sombra*/
-    text-align: center; /*alineacion del texto*/
+/* Como es el contenedor de cada proyecto */
+.proyecto {
+    background-color:#0b4cb5; /*Azul oscuro para el fondo dentro de la tarjeta */
+    border: 1px solid #45275d; /* Borde de la tarjeta */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 15px; /* Espacio interno */
+    margin: 0 0 2rem; /* Margen */
+    width: calc(40% - 40px); /* Ancho de la tarjeta ajustado */
+    box-shadow: 1px 2px 5px #af9fb6; /* Sombra */
+    text-align: center; /* Alineación del texto */
 }
 
-/*imagen del proyecto*/
-.proyecto img{
+/* Imagen del proyecto */
+.proyecto img {
     width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
     height: auto; /* Mantiene la proporción */
     object-fit: cover; /* Ajusta la imagen sin distorsionarla */
-    border-radius: 5px; /*bordes redondeados*/
+    border-radius: 5px; /* Bordes redondeados */
     transition: transform 0.3s ease; /* Transición suave */
 }
 
@@ -40,40 +40,51 @@
     transform: scale(1.05); /* Efecto de zoom en la imagen */
 }
 
-/*titulo del proyecto*/
-.proyecto h3{
+/* Titulo del proyecto */
+.proyecto h3 {
     margin-top: 10px; /* Margen superior */
     font-size: 1.4rem; /* Tamaño de la fuente */
-    color: var(--highlight-color); /* Color de acento */
+    color: #b0c4de; /* Color claro para el título */
 }
 
-/*descripcion del proyecto*/
-.proyecto p{
+/* Descripción del proyecto */
+.proyecto p {
     margin-top: 10px 0; /* Margen superior e inferior */
     font-size: 1rem;
     color: #eaeaea; /* Color claro para el texto */
 }
 
-/*boton de enlaces ancor*/
-.proyecto a{
-    display: inline-block; /*bloque en linea*/
-    margin-top: 10px; /*margen superior*/
-    padding: 10px 15px; /*espacio interno*/
-    background: #3f2962; /*color de fondo*/
-    color: #fff; /*color de la fuente*/
-    border-radius: 5px; /*bordes redondeados*/
+#imagenesTecnologias img {
+    width: 50px; /* Ajusta el tamaño de las imágenes */
+    height: auto;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+#imagenesTecnologias {
+    margin-top: 15px;
+}
+
+/* Botón de enlaces ancor */
+.proyecto a {
+    display: inline-block; /* Bloque en línea */
+    margin-top: 10px; /* Margen superior */
+    padding: 10px 15px; /* Espacio interno */
+    background: #5577a1; /* Color de fondo azul más claro */
+    color: #fff; /* Color de la fuente */
+    border-radius: 5px; /* Bordes redondeados */
     font-size: 1.1rem; /* Tamaño de la fuente */
     letter-spacing: 1px; /* Espaciado entre letras */
     transition: background 0.3s ease, transform 0.3s ease; /* Efectos de transición */
 }
 
-/*boton al pasar el mouse*/
-.proyecto a:hover{
-    background: #683899; /*color de fondo al pasar el mouse*/
+/* Botón al pasar el mouse */
+.proyecto a:hover {
+    background: #6c92bb; /* Azul aún más claro para el hover */
     transform: translateY(-5px); /* Efecto de desplazamiento al pasar el mouse */
 }
 
-/*Responsive design*/
+/* Responsive design */
 /* Pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
     .proyecto {
@@ -103,3 +114,4 @@
         font-size: 1.4rem; /* Ajustar tamaño de fuente */
     }
 }
+
