@@ -23,39 +23,74 @@
     <link rel="stylesheet" href="./css/proyecto.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/contacto.css">
+    <link rel="stylesheet" href="./css/darkmode.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleThemeButton = document.getElementById("toggle-theme");
+            const body = document.body;
 
+            // Detectar preferencia del usuario
+            if (localStorage.getItem("theme") === "dark" || (localStorage.getItem("theme") === null && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+                body.classList.add("dark-mode");
+            }
+
+            toggleThemeButton.addEventListener("click", function () {
+                body.classList.toggle("dark-mode");
+                localStorage.setItem("theme", body.classList.contains("dark-mode") ? "dark" : "light");
+            });
+        });
+    </script>
 </head>
 
 <body>
     <header>
-        <h1>Bruno Villarreal</h1>
         <!-- Menú de navegación responsivo -->
         <nav>
+            <br><br>
             <ul class="navigation">
                 <li><a href="#sobremi">Sobre mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#experiencias">Experiencias</a></li>
                 <li><a href="#estudios">Mis estudios</a></li>
                 <li><a href="#contacto">Contacto</a></li>
+                <button id="toggle-theme" class="theme-toggle">Modo Claro/Oscuro</button>
             </ul>
         </nav>
     </header>
 
     <main class="main-container">
         <!-- Sección Sobre mí -->
-        <section id="sobremi" class="sobremi">
-            <article class="container-sobremi">
-                <div class="perfil-imagen">
-                    <img class="img-perfil" src="./Assets/perfil.jpg" alt="Foto de Bruno Villarreal" width="200" height="240">
-                </div>
-                <div class="perfil-info">
-                    <h2>Cursante del último año para recibirme de <b>Técnico en informática Profesional y Personal</b></h2>
-                    <p>Me apasiona programar y desarrollar soluciones web creativas y funcionales.</p>
-                </div>
-            </article>
-        </section>
+        <!-- Sección Sobre mí -->
+<section id="sobremi" class="sobremi">
+    <article class="container-sobremi">
+        <div class="perfil-imagen">
+            <img class="img-perfil" src="./Assets/perfil.jpg" alt="Foto de Bruno Villarreal" width="200" height="240">
+            <h1>Bruno Villarreal</h1> <!-- Ahora el h1 está debajo de la imagen -->
+        </div>
+        <div class="perfil-info">
+            <h2>Cursante del último año para recibirme de <b>Técnico en informática Profesional y Personal</b></h2>
+            <p>Me apasiona buscar soluciones para problemas lógicos y desarrollar programas eficaces. </p>
+        </div>
+    </article>
+</section>
+
     </main>
+    
     <hr class="separador"> <!-- Barra horizontal azul oscuro -->
+    <section id="habilidades" class="habilidades">
+        <article class="container-experiencias">
+            <h2>Habilidades</h2>
+            <h3>Habilidades técnicas</h3>
+            <p>Manejo del lenguaje JS especialmente, y con conocimientos en Python, C++, PHP, HTML.</p>
+            <p>Gran control de los programas de Office.</p>
+            <p>Buen entendimiento de los trabajos con Base de Datos</p>
+            <h3>Habilidades blandas</h3>
+            <p>Buena redacción y comunicación.</p>
+            <p>Gran capacidad de liderazgo y trabajo en equipo</p>
+        </article>
+    </section>
+    <hr class="separador">
         <!-- Sección Proyectos -->
         <section id="proyectos" class="proyectos">
             <article class="container-proyectos">

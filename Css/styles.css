@@ -1,4 +1,4 @@
-/*Variables CSS*/
+/* Variables CSS */
 :root {
     --body-bg-color: #4a90e2; /* Azul Francia clarito */
     --text-color: #ffffff; /*color de la fuente*/
@@ -8,120 +8,137 @@
     --btn-hover-bg-color: #7db9e8; /* Sombra más clara en los botones */
     --highlight-color: #5f069a; /*color de resaltado*/
 }
-/*aplicar las variables CSS creadas por el root*/
 
+/* Estilos generales */
 body {
-    display: flex; /*flexbox - parte4*/
-    flex-direction: column; /*direccion de los elementos -parte4 */
-    background: var(--body-bg-color); /*color de fondo*/
-    color: var(--text-color); /*color de la fuente*/
+    display: flex;
+    flex-direction: column;
+    background: var(--body-bg-color);
+    color: var(--text-color);
     font-family: 'Segoe', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
 }
-h1,h2{
-    color: var(--colorh1-color); /*color de los títulos*/
+
+/* Títulos */
+h1, h2 {
+    color: var(--colorh1-color);
 }
+
 /* Estilos para la barra horizontal */
 .separador {
     border: 0;
     border-top: 3px solid #003366; /* Azul oscuro */
-    margin: 20px 0; /* Espacio antes y después de la barra */
-    width: 80%; /* Puedes ajustar el ancho según tu preferencia */
+    margin: 20px 0;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
 
-
-/* estilo de la barra de navegacion*/
+/* Estilos de enlaces */
 a {
     text-decoration: none;
     color: var(--text-color);
-    transition: background-color 0.3s ease, color 0.3s ease; /* Agregar transición suave */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a:hover {
-    color: var(--highlight-color); /* Resaltar al pasar el cursor */
+    color: var(--highlight-color);
 }
 
-/*Titulo del header*/
+/* Título del header */
 .titulo {
-    display: flex; /* Flexbox */
-    margin: 3rem; /* Margen superior e inferior */
-    justify-content: center; /* Centrado en pantallas pequeñas */
+    display: flex;
+    margin: 3rem;
+    justify-content: center;
 }
 
-/*barra de navegacion*/
-.navigation {
-    display: flex; /*flexbox*/
-    gap: 3rem; /*espacio entre los elementos*/
-    list-style: none; /*quita los puntos de la lista*/
-    justify-content: flex-end; /*justifica los elementos a la derecha*/
-    margin: 0  3rem; /*margen superior e inferior*/    
+/* Barra de navegación */
+header {
+    position: fixed;  /* Fija la barra en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;  /* Ocupa todo el ancho de la pantalla */
+    background-color: #003366; /* Azul oscuro */
+    padding: 10px 0;
+    z-index: 1000;  /* Para que siempre esté sobre el contenido */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;
 }
-/* enlaces de la barra de navegacion*/
+
+/* Contenedor de navegación */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Lista de navegación */
+.navigation {
+    display: flex;
+    gap: 2rem; /* Espacio entre elementos */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Elementos de la lista */
 .navigation li {
     font-size: 1rem;
-    width: 100px; /*ancho de los elementos*/
+    width: auto; /* Se adapta al contenido */
     text-align: center;
-    padding: 0.5rem; /*espacio interno*/
-    border-radius: 0.5rem; /*bordes redondeados*/
-    background: var(--btn-bg-color); /* Color de fondo */
-    box-shadow: 0 0 0.5rem #a3a3a3; /* Sombra */
-    transition: background-color 0.3s ease; /* Transición suave */
+    padding: 0.5rem 1rem; /* Espaciado interno */
+    border-radius: 0.5rem;
+    background: var(--btn-bg-color);
+    box-shadow: 0 0 0.5rem #a3a3a3;
+    transition: background-color 0.3s ease;
 }
 
-/* al pasar el cursor por los enlaces de la barra de navegacion cambia el color*/
+/* Efecto hover en los botones */
 .navigation li:hover {
-    background-color: var(--btn-hover-bg-color); /* Color al pasar el cursor */
+    background-color: var(--btn-hover-bg-color);
 }
 
-/*Todos los elementos dentro del contenedor principal*/
+/* Ajustes generales */
 .main-container {
-    display: flex; /*flexbox*/
-    flex-direction: column; /*direccion de los elementos*/
-    gap: 1rem; /* Ajuste menor espacio entre secciones */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-/* Estilos generales para las secciones */
-section {
-    padding: 2rem 0;
+/* Ajustar el contenido para que no quede oculto debajo del header fijo */
+body {
+    padding-top: 60px; /* Altura del header */
 }
 
-/*Responsive design*/
-/* Media Queries agrupadas */
-
-/* Estilos para pantallas pequeñas, celular de 768px o menos */
+/* Responsive design */
 @media (max-width: 768px) {
     .titulo {
-        justify-content: center; /*centra el contenido*/
+        justify-content: center;
     }
-    .navigation{
-        flex-direction: column; /*cambia la direccion de los elementos*/
-        gap: 1rem; /*espacio entre los elementos*/
+    .navigation {
+        flex-direction: column;
+        gap: 1rem;
         align-items: center;
     }
 }
 
-/* Estilos para pantallas medianas, tablet de 768px a 1024px */
 @media (min-width: 768px) and (max-width: 1024px) {
     .titulo {
-        justify-content: center; /*centra el contenido*/
+        justify-content: center;
     }
-    .navigation{
-        gap: 2rem; /*espacio entre los elementos*/
-        justify-items: center;
+    .navigation {
+        gap: 2rem;
     }
 }
 
-/* Estilos para pantallas grandes, desktop de 1024px o más */
 @media (min-width: 1024px) {
     .titulo {
-        justify-content: flex-start; /*justifica el contenido a la izquierda*/
+        justify-content: center;
     }
-    .navigation{
-        gap: 3rem; /*espacio entre los elementos*/
-        justify-items: flex-end; /*justifica los elementos a la derecha*/
-        margin: 0  3rem; /*margen superior e inferior*/
-    } 
+    .navigation {
+        gap: 3rem;
+    }
 }
