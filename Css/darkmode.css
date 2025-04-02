@@ -1,0 +1,32 @@
+body {
+    transition: background 0.3s, color 0.3s;
+}
+
+.dark-mode {
+    background-color: #001f3f;
+    color: white;
+}
+
+.dark-mode nav {
+    background-color: #003366;
+}
+
+.dark-mode footer {
+    background-color: #003366;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #00509e;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.dark-mode #proyectos {
+    background-color: var(--color-primario-oscuro);
+    color: white;
+}
